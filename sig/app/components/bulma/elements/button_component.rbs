@@ -1,0 +1,8 @@
+module Bulma
+  module Elements
+    class ButtonComponent < Bulma::Elements::Button::BaseComponent
+      @content_or_options: untyped?
+      def initialize: (?untyped? content_or_options, **untyped) -> void
+    end
+  end
+end

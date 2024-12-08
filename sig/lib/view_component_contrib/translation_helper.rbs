@@ -1,0 +1,10 @@
+module ViewComponentContrib
+  module TranslationHelper
+    module ClassMethods
+      attr_accessor i18n_namespace (@i18n_namespace) : String
+      attr_reader contrib_i18n_scope (@contrib_i18n_scope) : String
+      attr_writer i18n_scope : Array[String]
+      def virtual_path: -> String
+    end
+  end
+end

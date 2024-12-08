@@ -1,0 +1,18 @@
+module Bulma
+  module Components
+    module Card
+      class HeaderComponent < ApplicationComponent
+        def title: (?String? text, **untyped html_attributes) ?{ (Header::TitleComponent component) -> String } -> Header::TitleComponent
+        def icon: (**untyped html_attributes) ?{ (Header::IconComponent component) -> String } -> Header::IconComponent
+
+        private
+
+        def card_header_title: -> Header::TitleComponent
+        def card_header_icon: -> Header::IconComponent
+
+        def with_card_header_title: (?String? text, **untyped html_attributes) ?{ (Header::TitleComponent component) -> String } -> Header::TitleComponent
+        def with_card_header_icon: (**untyped html_attributes) ?{ (Header::IconComponent component) -> String } -> Header::IconComponent
+      end
+    end
+  end
+end

@@ -1,0 +1,23 @@
+module Bulma
+  module Elements
+    module Tag
+      class BaseComponent < Bulma::ApplicationComponent
+        type size = :small | :normal | :medium | :large
+        type color = :black | :dark | :white | :primary | :link | :info | :success | :warning | :danger
+
+        @size: size?
+        @color: color?
+        @light: boolish
+        @hoverable: boolish
+        @rounded: boolish
+        @delete: boolish
+
+        def initialize: (?size: size?, ?color: color?, ?light: boolish?, ?hoverable: boolish?, ?rounded: boolish?, ?delete: boolish?, **untyped html_attributes) -> void
+
+        private
+
+        def variants: -> Hash[Symbol, _ToS | boolish]
+      end
+    end
+  end
+end

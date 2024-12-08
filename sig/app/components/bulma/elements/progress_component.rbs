@@ -1,0 +1,12 @@
+module Bulma
+  module Elements
+    class ProgressComponent < Bulma::ApplicationComponent
+      type color = :link | :primary | :info | :success | :warning | :danger | :light
+      type size = :small | :normal | :medium | :large
+
+      @size: size?
+      @color: color?
+      def initialize: (?_ToS?, ?size: size?, ?color: color?, **untyped) -> void
+    end
+  end
+end

@@ -1,0 +1,12 @@
+module Bulma
+  module Components
+    module Dropdown
+      module Menu
+        class ItemComponent < ApplicationComponent
+          @active: bool?
+          def initialize: (?active: bool?, **untyped html_attributes) -> void
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,6 @@
+module Bulma
+  module Elements
+    class BlockComponent < Bulma::ApplicationComponent
+    end
+  end
+end

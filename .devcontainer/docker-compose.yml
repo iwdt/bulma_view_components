@@ -1,0 +1,12 @@
+services:
+  gem:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      target: ruby-builder
+    volumes:
+      - ..:/home/developer/bulma_view_componets:cached
+    command: sleep infinity
+    environment:
+      - TZ=Europe/Moscow
+    user: developer

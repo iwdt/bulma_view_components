@@ -1,0 +1,9 @@
+module Bulma
+  module Elements
+    class TagComponent < Tag::BaseComponent
+
+      @name: _ToS?
+      def initialize: (?_ToS? name, **untyped html_attributes) -> void
+    end
+  end
+end

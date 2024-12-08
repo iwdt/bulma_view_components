@@ -1,0 +1,14 @@
+module Bulma
+  module Elements
+    class SubtitleComponent < ApplicationComponent
+      type size = 1 | 2 | 3 | 4 | 5 | 6
+
+      SIZE_MAP: Hash[String, Symbol]
+
+      @subtitle: _ToS?
+      @size: Symbol?
+      @spaced: boolish?
+      def initialize: (?_ToS? subtitle, ?tag: (String | Symbol)?, ?size: size?, ?spaced: boolish?, **untyped html_attributes) -> void
+    end
+  end
+end

@@ -1,0 +1,27 @@
+module Bulma
+  module Elements
+    class TableComponent < Bulma::ApplicationComponent
+      @scrollable: boolish
+      @bordered: boolish
+      @striped: boolish
+      @narrow: boolish
+      @hoverable: boolish
+      @fullwidth: boolish
+
+      def initialize: (?scrollable: boolish?, ?bordered: boolish?, ?striped: boolish?, ?narrow: boolish?, ?hoverable: boolish?, ?fullwidth: boolish?, **untyped html_attributes) -> void
+
+      def header: (**untyped html_attributes) ?{(?Table::HeaderComponent component) -> String} -> Table::HeaderComponent
+      def body: (**untyped html_attributes) ?{(?Table::BodyComponent component) -> String} -> Table::BodyComponent
+      def footer: (**untyped html_attributes) ?{(?Table::FooterComponent component) -> String} -> Table::FooterComponent
+
+      private
+
+      def table_header: -> Table::HeaderComponent
+      def table_body: -> Table::BodyComponent
+      def table_footer: -> Table::FooterComponent
+      def with_table_header: (**untyped html_attributes) ?{(?Table::HeaderComponent component) -> String} -> Table::HeaderComponent
+      def with_table_body: (**untyped html_attributes) ?{(?Table::BodyComponent component) -> String} -> Table::BodyComponent
+      def with_table_footer: (**untyped html_attributes) ?{(?Table::FooterComponent component) -> String} -> Table::FooterComponent
+    end
+  end
+end

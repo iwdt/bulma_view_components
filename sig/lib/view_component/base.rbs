@@ -1,0 +1,34 @@
+module ViewComponent
+  class Base
+    type component = singleton(ViewComponent::Base)
+                   | String
+                   | ^(*untyped?, **untyped?) [self: ViewComponent::Base] ?{ () -> untyped? } -> untyped
+                   | Proc
+
+    include ActionView::Helpers::TagHelper
+    include ActionView::Helpers::AssetTagHelper
+    include ActionView::Helpers::UrlHelper
+    include ActionView::Helpers::FormTagHelper
+
+    private
+
+    def self.renders_many: (_ToS, component) -> void
+                         | (_ToS, types: Hash[Symbol, component]) -> void
+    def self.renders_one: (_ToS, component) -> void
+    def content: -> String
+               | -> Base
+    def content?: -> bool
+    def render: (*untyped?, **untyped?) ?{ (*untyped?, **untyped?) -> untyped? } -> untyped?
+              | (*untyped?, **untyped?) ?{ () -> untyped? } -> untyped?
+
+    #
+    # Fixes:
+    #
+
+    def button_tag: (?untyped? content_or_options, ?untyped? options) ?{ () -> untyped } -> untyped
+    def content_tag: (untyped name, ?untyped? content_or_options_with_block, ?untyped? options, ?bool escape) ?{ () -> untyped } -> untyped
+    def picture_tag: (*untyped sources, **untyped) ?{ () -> void } -> untyped
+    def phone_to: (?untyped phone_number, ?untyped name, ?Hash[untyped, untyped]? html_attributes) ?{ () -> void } -> untyped
+    def sms_to: (?untyped phone_number, ?untyped name, ?Hash[untyped, untyped?] html_attributes) ?{ () -> void } -> untyped
+  end
+end

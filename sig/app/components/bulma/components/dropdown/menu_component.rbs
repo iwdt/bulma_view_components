@@ -1,0 +1,26 @@
+module Bulma
+  module Components
+    module Dropdown
+      class MenuComponent < ApplicationComponent
+        def item: (**untyped html_attributes) ?{ (Menu::ItemComponent component) -> String } -> Menu::ItemComponent
+        def divider: (**untyped html_attributes) -> Menu::DividerComponent
+        def link_to: (?untyped, ?untyped, **untyped) ?{ (?Menu::LinkComponent component) -> String } -> Menu::LinkComponent
+        def button_to: (?untyped, ?untyped, **untyped) ?{ (?Menu::FormComponent component) -> String } -> Menu::FormComponent
+        def mail_to: (untyped, ?untyped, **untyped) ?{ (?Menu::MailComponent component) -> String } -> Menu::MailComponent
+        def phone_to: (untyped, ?untyped, **untyped) ?{ (?Menu::PhoneComponent component) -> String } -> Menu::PhoneComponent
+        def sms_to: (untyped, ?untyped, **untyped) ?{ (?Menu::SmsComponent component) -> String } -> Menu::SmsComponent
+
+        private
+
+        def with_dropdown_item_tag: (**untyped html_attributes) ?{ (Menu::ItemComponent component) -> String } -> Menu::ItemComponent
+        def with_dropdown_item_divider:  (**untyped html_attributes) -> Menu::DividerComponent
+        def with_dropdown_item_link_to: (?untyped, ?untyped, **untyped) ?{ (?Menu::LinkComponent component) -> String } -> Menu::LinkComponent
+        def with_dropdown_item_button_to: (?untyped, ?untyped, **untyped) ?{ (?Menu::FormComponent component) -> String } -> Menu::FormComponent
+        def with_dropdown_item_mail_to: (untyped, ?untyped, **untyped) ?{ (?Menu::MailComponent component) -> String } -> Menu::MailComponent
+        def with_dropdown_item_phone_to: (untyped, ?untyped, **untyped) ?{ (?Menu::PhoneComponent component) -> String } -> Menu::PhoneComponent
+        def with_dropdown_item_sms_to: (untyped, ?untyped, **untyped) ?{ (?Menu::SmsComponent component) -> String } -> Menu::SmsComponent
+        def dropdown_items: -> Array[Menu::ItemComponent | Menu::DividerComponent]
+      end
+    end
+  end
+end

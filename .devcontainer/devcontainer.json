@@ -1,0 +1,55 @@
+{
+	"name": "Bulma ViewComponents",
+	"service": "gem",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/home/developer/bulma_view_componets",
+	"remoteUser": "developer",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"[ruby]": {
+					"editor.defaultFormatter": "Shopify.ruby-lsp"
+				},
+				"rubyLsp.rubyVersionManager": {
+					"identifier": "none"
+				},
+				"rubyLsp.formatter": "standard",
+				"rubyLsp.linters": [
+					"standard"
+				],
+				"rubyLsp.featuresConfiguration": {
+					"inlayHint": {
+						"enableAll": true
+					}
+				},
+				"rubyLsp.yjit": true,
+				"rubyLsp.enableExperimentalFeatures": true,
+				"solargraph.autoformat": false,
+				"solargraph.formatting": false,
+				"simplecov.coverageOptions": "showUncoveredCodeOnly",
+				"simplecov.coverageDecorator": {
+					"type": "gutter",
+					"uncoveredGutterStyle": "blockred",
+					"uncoveredBranchGutterStyle": "slashred"
+				}
+			},
+			"extensions": [
+				"Shopify.ruby-lsp",
+				"KoichiSasada.vscode-rdbg",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"castwide.solargraph",
+				"soutaro.rbs-syntax",
+				"soutaro.steep-vscode"
+			]
+		}
+	},
+	"onCreateCommand": {
+		"gems": "gem install foreman yard solargraph && yard config --gem-install-yri && bundle install"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"nonFreePackages": true,
+			"configureZshAsDefaultShell": true
+		}
+	}
+}

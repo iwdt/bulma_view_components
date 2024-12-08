@@ -1,0 +1,23 @@
+module Bulma
+  module Elements
+    module Table
+      class RowComponent < Bulma::ApplicationComponent
+        type color = :primary | :link | :info | :success | :warning | :danger | :black | :dark | :light | :white
+
+        @cols_tag: Symbol?
+        @color: color?
+        @selected: boolish?
+
+        def initialize: (?cols_tag: Symbol?, ?color: color?, ?selected: boolish?, **untyped html_attributes) -> void
+
+        def col: (?String? text, **untyped) ?{ (?ColComponent component) -> String } -> ColComponent
+
+        private
+
+        def table_cols: (**untyped) -> Array[ColComponent]
+        def with_table_cols: (Array[Hash[untyped, untyped]]) -> Array[ColComponent]
+        def with_table_col: (?String? text, **untyped) ?{ (?ColComponent component) -> String } -> ColComponent
+      end
+    end
+  end
+end

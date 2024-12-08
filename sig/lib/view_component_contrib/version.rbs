@@ -1,0 +1,3 @@
+module ViewComponentContrib
+  VERSION: String
+end

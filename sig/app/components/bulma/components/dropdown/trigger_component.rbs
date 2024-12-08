@@ -1,0 +1,8 @@
+module Bulma
+  module Components
+    module Dropdown
+      class TriggerComponent < ApplicationComponent
+      end
+    end
+  end
+end

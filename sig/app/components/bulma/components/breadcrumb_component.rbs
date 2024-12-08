@@ -1,0 +1,24 @@
+module Bulma
+  module Components
+    class BreadcrumbComponent < ApplicationComponent
+      type alignment = :centered | :right
+      type separator = :arrow | :bullet | :dot | :succeeds
+      type size = :small | :normal | :medium | :large
+
+
+      @alignment: alignment?
+      @separator: separator?
+      @size: size?
+
+      def initialize: (?separator: separator?, ?alignment: alignment?, ?size: size?, **untyped html_attributes) -> void
+      def item: (?tag: Symbol?, ?active: bool, **untyped html_attributes) ?{ (?Bulma::ApplicationComponent component) -> String } -> Bulma::ApplicationComponent
+
+      private
+
+      def breadcrumb_items: () -> Array[Bulma::ApplicationComponent]
+      def breadcrumb_items?: () -> bool
+      def with_breadcrumb_item: (**untyped) ?{ (?Bulma::ApplicationComponent component) -> String } -> Bulma::ApplicationComponent
+      def with_breadcrumb_items: (Array[Hash[Symbol, untyped]]) -> Array[Bulma::ApplicationComponent]
+    end
+  end
+end

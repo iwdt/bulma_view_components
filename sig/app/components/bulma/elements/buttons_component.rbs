@@ -1,0 +1,28 @@
+module Bulma
+  module Elements
+    class ButtonsComponent < Bulma::ApplicationComponent
+      type alignment = :center | :right
+
+      @alignment: alignment?
+      @addons: boolish?
+      def initialize: (?alignment: alignment?, ?addons: boolish?, **untyped) -> void
+
+      def link_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::LinkComponent component) -> String } -> Bulma::Elements::Button::LinkComponent
+      def button_tag: (?untyped, **untyped) ?{ (?Bulma::Elements::ButtonComponent component) -> String } -> Bulma::Elements::ButtonComponent
+      def button_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::FormComponent component) -> String } -> Bulma::Elements::Button::FormComponent
+      def mail_to: (untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::MailComponent component) -> String } -> Bulma::Elements::Button::MailComponent
+      def phone_to: (untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::PhoneComponent component) -> String } -> Bulma::Elements::Button::PhoneComponent
+      def sms_to: (untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::SmsComponent component) -> String } -> Bulma::Elements::Button::SmsComponent
+
+      private
+
+      def buttons: -> Array[Bulma::Elements::Button::BaseComponent]
+      def with_button_link_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::LinkComponent component) -> String } -> Bulma::Elements::Button::LinkComponent
+      def with_button_tag: (?untyped, **untyped) ?{ (?Bulma::Elements::ButtonComponent component) -> String } -> Bulma::Elements::ButtonComponent
+      def with_button_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::FormComponent component) -> String } -> Bulma::Elements::Button::FormComponent
+      def with_button_mail_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::MailComponent component) -> String } -> Bulma::Elements::Button::MailComponent
+      def with_button_phone_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::PhoneComponent component) -> String } -> Bulma::Elements::Button::PhoneComponent
+      def with_button_sms_to: (?untyped, ?untyped, **untyped) ?{ (?Bulma::Elements::Button::SmsComponent component) -> String } -> Bulma::Elements::Button::SmsComponent
+    end
+  end
+end

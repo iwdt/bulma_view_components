@@ -1,0 +1,15 @@
+module Bulma
+  module Elements
+    class ImageComponent < Bulma::ApplicationComponent
+      type dimension = 16 | 24 | 32 | 48 | 64 | 96 | 128
+      type ratio = "square" | "1_by_1" | "5_by_4" | "4_by_3" | "3_by_2" | "5_by_3" | "16_by_9" | "2_by_1" | "3_by_1" | "4_by_5" | "3_by_4" | "2_by_3" | "3_by_5" | "9_by_16" | "1_by_2" | "1_by_3"
+
+      DIMENSION_MAP: Hash[String, Symbol]
+
+      @dimension: Symbol?
+      @ratio: Symbol?
+
+      def initialize: (?dimension: dimension?, ?ratio: ratio?, **untyped) -> void
+    end
+  end
+end

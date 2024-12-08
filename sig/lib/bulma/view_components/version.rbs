@@ -1,0 +1,5 @@
+module Bulma
+  module ViewComponents
+    VERSION: String
+  end
+end

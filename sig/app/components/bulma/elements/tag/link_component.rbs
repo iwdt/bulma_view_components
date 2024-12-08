@@ -1,0 +1,12 @@
+module Bulma
+  module Elements
+    module Tag
+      class LinkComponent < BaseComponent
+        @options: untyped?
+        @name: untyped?
+
+        def initialize: (?untyped? name, ?untyped? options, **untyped) -> void
+      end
+    end
+  end
+end

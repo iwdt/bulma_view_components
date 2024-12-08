@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Card
+      module Header
+        class IconComponent < ApplicationComponent
+        end
+      end
+    end
+  end
+end

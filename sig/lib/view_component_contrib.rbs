@@ -1,0 +1,3 @@
+module ViewComponentContrib
+  APP_PATH: String
+end

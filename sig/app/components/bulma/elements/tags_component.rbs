@@ -1,0 +1,27 @@
+module Bulma
+  module Elements
+    class TagsComponent < Bulma::ApplicationComponent
+      @addons: boolish?
+
+      def initialize: (?addons: boolish?, **untyped) -> void
+
+      def tag: (?_ToS?, **untyped) ?{ (?TagComponent component) -> String }-> TagComponent
+      def link_to: (?untyped?, ?untyped?, **untyped) ?{(?Tag::LinkComponent component) -> String }-> Tag::LinkComponent
+      def button_to: (?untyped?, ?untyped?, **untyped) ?{(?Tag::FormComponent component) -> String }-> Tag::FormComponent
+      def mail_to: (untyped, ?untyped, **untyped) ?{ (?Tag::MailComponent component) -> String } -> Tag::MailComponent
+      def phone_to: (untyped, ?untyped, **untyped) ?{ (?Tag::PhoneComponent component) -> String } -> Tag::PhoneComponent
+      def sms_to: (untyped, ?untyped, **untyped) ?{ (?Tag::SmsComponent component) -> String } -> Tag::SmsComponent
+
+      private
+
+      def component_tags: -> Array[TagComponent]
+      def with_component_tags: (Array[Hash[untyped, untyped]]) -> Array[TagComponent]
+      def with_component_tag_basic: (?_ToS?, **untyped) ?{ (?TagComponent component) -> String }-> TagComponent
+      def with_component_tag_link_to: (?untyped?, ?untyped?, **untyped) ?{ (?Tag::LinkComponent component) -> String }-> Tag::LinkComponent
+      def with_component_tag_button_to: (?untyped?, ?untyped?, **untyped) ?{ (?Tag::FormComponent component) -> String }-> Tag::FormComponent
+      def with_component_tag_mail_to: (?untyped?, ?untyped?, **untyped) ?{ (?Tag::MailComponent component) -> String } -> Tag::MailComponent
+      def with_component_tag_phone_to: (?untyped?, ?untyped?, **untyped) ?{ (?Tag::PhoneComponent component) -> String } -> Tag::PhoneComponent
+      def with_component_tag_sms_to: (?untyped?, ?untyped?, **untyped) ?{ (?Tag::SmsComponent component) -> String } -> Tag::SmsComponent
+    end
+  end
+end

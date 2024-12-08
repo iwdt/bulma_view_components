@@ -1,0 +1,11 @@
+module Bulma
+  module Elements
+    module Button
+      class PhoneComponent < Button::BaseComponent
+        @phone_number: untyped?
+        @name: untyped?
+        def initialize: (?untyped?, ?untyped?, **untyped) -> void
+      end
+    end
+  end
+end

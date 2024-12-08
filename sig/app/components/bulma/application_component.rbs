@@ -1,0 +1,36 @@
+module Bulma
+  class ApplicationComponent < ViewComponentContrib::Base
+    type html_class = nil | String | Symbol | Array[String | Symbol] | Hash[String | Symbol, boolish]
+
+    include ViewComponentContrib::StyleVariants::InstanceMethods
+    extend ViewComponentContrib::StyleVariants::ClassMethods
+    extend ClassMethods
+
+    # Class Methods
+    module ClassMethods
+      attr_accessor root_tag (@root_tag): String | Symbol
+
+      @component_name: String | nil
+      def component_name: -> (String | nil)
+      def name: -> String
+    end
+
+    # Instance methods
+    @component_name: String | nil
+    private attr_reader root_tag (@root_tag): String | Symbol
+    @root_classes: html_class
+    @root_modifiers: Hash[Symbol, html_class]
+    @root_attributes: Hash[Symbol, untyped]
+
+    def initialize: (?tag: String | Symbol, **untyped) -> void
+    def call: -> String
+
+    private
+
+    def root_attributes: (*_ToS, **(_ToS | boolish)) -> Hash[Symbol, untyped]
+    def root_modifiers: -> Array[html_class]
+    def root_style: (*_ToS, **(_ToS | boolish)) -> Array[html_class]
+    def modifier_class_for: (html_class modifier, ?prefix: Symbol?) -> untyped
+    def component_name: -> (String | nil)
+  end
+end

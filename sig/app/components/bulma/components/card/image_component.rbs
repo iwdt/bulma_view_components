@@ -1,0 +1,8 @@
+module Bulma
+  module Components
+    module Card
+      class ImageComponent < ApplicationComponent
+      end
+    end
+  end
+end

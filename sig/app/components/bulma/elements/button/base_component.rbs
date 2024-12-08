@@ -1,0 +1,30 @@
+module Bulma
+  module Elements
+    module Button
+      class BaseComponent < Bulma::ApplicationComponent
+        type color = :white | :black | :text | :ghost | :primary | :link | :info | :success | :warning | :danger
+        type theme = :light | :dark
+        type size = :small | :normal | :medium | :large
+        type state = :hovered | :focused | :active
+
+        type variants = {
+          ?color: color?,
+          ?theme: theme?,
+          ?size: size?,
+          ?state: state?,
+          ?responsive: boolish?,
+          ?full_width: boolish?,
+          ?outlined: boolish?,
+          ?rounded: boolish?,
+          ?static: boolish?,
+          ?inverted: boolish?,
+          ?selected: boolish?,
+          ?loading: boolish?
+        }
+
+        private attr_reader variants (@variants): variants
+        def initialize: (**untyped) -> void
+      end
+    end
+  end
+end

@@ -1,0 +1,11 @@
+module ViewComponentContrib
+  class WrappedComponent < ViewComponent::Base
+    class DoubleRenderError < StandardError
+      def initialize: (ViewComponent::Base) -> void
+    end
+
+    attr_reader component_instance (@component_instance): ViewComponent::Base
+    def initialize: (ViewComponent::Base) -> void
+    def component: -> String
+  end
+end

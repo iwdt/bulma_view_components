@@ -1,0 +1,7 @@
+module ViewComponentContrib
+  module WrappedHelper
+    module InstanceMethods
+      def wrapped: () -> ViewComponentContrib::WrappedComponent
+    end
+  end
+end

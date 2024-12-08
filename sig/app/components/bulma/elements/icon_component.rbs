@@ -1,0 +1,9 @@
+module Bulma
+  module Elements
+    class IconComponent < Bulma::ApplicationComponent
+      type size = :small | :normal | :medium | :large
+      @size: size?
+      def initialize: (?size: size?, **untyped) -> void
+    end
+  end
+end

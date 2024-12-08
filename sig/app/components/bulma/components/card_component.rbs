@@ -1,0 +1,24 @@
+module Bulma
+  module Components
+    class CardComponent < ApplicationComponent
+
+      def image: (**untyped) ?{ (?Card::ImageComponent component) -> String } -> Card::ImageComponent
+      def header: (**untyped) ?{ (?Card::HeaderComponent component) -> String } -> Card::HeaderComponent
+      def body: (**untyped) ?{ (?Card::ContentComponent component) -> String } -> Card::ContentComponent
+      def footer: (**untyped) ?{ (?Card::FooterComponent component) -> String } -> Card::FooterComponent
+
+      private
+
+      def card_image: () -> Card::ImageComponent?
+      def card_header: () -> Card::HeaderComponent?
+      def card_content: () -> Card::ContentComponent?
+      def card_footer: () -> Card::FooterComponent?
+
+      def card_content?: -> bool
+      def with_card_image: (**untyped) ?{ (?Card::ImageComponent component) -> String } -> Card::ImageComponent
+      def with_card_header: (**untyped) ?{ (?Card::HeaderComponent component) -> String } -> Card::HeaderComponent
+      def with_card_content: (**untyped) ?{ (?Card::ContentComponent component) -> String } -> Card::ContentComponent
+      def with_card_footer: (**untyped) ?{ (?Card::FooterComponent component) -> String } -> Card::FooterComponent
+    end
+  end
+end

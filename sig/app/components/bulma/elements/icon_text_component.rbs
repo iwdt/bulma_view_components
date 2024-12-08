@@ -1,0 +1,6 @@
+module Bulma
+  module Elements
+    class IconTextComponent < Bulma::ApplicationComponent
+    end
+  end
+end

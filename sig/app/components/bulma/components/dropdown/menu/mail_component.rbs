@@ -1,0 +1,13 @@
+module Bulma
+  module Components
+    module Dropdown
+      module Menu
+        class MailComponent < ItemComponent
+          @email_address: untyped?
+          @name: untyped?
+          def initialize: (?untyped?, ?untyped?, **untyped) -> void
+        end
+      end
+    end
+  end
+end

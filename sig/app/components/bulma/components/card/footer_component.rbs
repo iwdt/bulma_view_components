@@ -1,0 +1,14 @@
+module Bulma
+  module Components
+    module Card
+      class FooterComponent < ApplicationComponent
+        def item: (**untyped html_attributes) ?{ (Footer::ItemComponent component) -> String } -> Footer::ItemComponent
+
+        private
+
+        def card_footer_items: -> Array[Footer::ItemComponent]
+        def with_card_footer_item: (**untyped html_attributes) ?{ (Footer::ItemComponent component) -> String } -> Footer::ItemComponent
+      end
+    end
+  end
+end

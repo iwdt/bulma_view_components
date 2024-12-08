@@ -1,0 +1,11 @@
+module Bulma
+  module Elements
+    class ContentComponent < Bulma::ApplicationComponent
+      type size = :small | :normal | :medium | :large
+
+      @size: size?
+
+      def initialize: (?size: size?, **untyped) -> void
+    end
+  end
+end

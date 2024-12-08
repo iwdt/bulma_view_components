@@ -1,0 +1,19 @@
+module Bulma
+  module Elements
+    class NotificationComponent < Bulma::ApplicationComponent
+      type color = :link | :primary | :info | :success | :warning | :danger
+
+      @text: _ToS?
+      @color: color?
+      @light: boolish
+      def initialize: (?_ToS?, ?color: color?, ?light: boolish, **untyped) -> void
+
+      def close: (**untyped html_attributes) ?{ (?Bulma::Elements::DeleteComponent component) -> String } -> Bulma::Elements::DeleteComponent
+
+      private
+
+      def notification_close: () -> Bulma::Elements::DeleteComponent?
+      def with_notification_close: (**untyped html_attributes) ?{ (?Bulma::Elements::DeleteComponent component) -> String } -> Bulma::Elements::DeleteComponent
+    end
+  end
+end

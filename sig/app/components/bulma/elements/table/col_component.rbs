@@ -1,0 +1,13 @@
+module Bulma
+  module Elements
+    module Table
+      class ColComponent < Bulma::ApplicationComponent
+        type color = :primary | :link | :info | :success | :warning | :danger | :black | :dark | :light | :white
+
+        @text: _ToS?
+        @color: color?
+        def initialize: (?_ToS? text, ?color: color?, **untyped html_attributes) -> void
+      end
+    end
+  end
+end

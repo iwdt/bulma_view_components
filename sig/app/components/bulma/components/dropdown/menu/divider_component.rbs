@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Dropdown
+      module Menu
+        class DividerComponent < ApplicationComponent
+        end
+      end
+    end
+  end
+end

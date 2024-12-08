@@ -1,0 +1,13 @@
+module Bulma
+  module Elements
+    module Tag
+      class FormComponent < BaseComponent
+        FORM_STYLE_FIXES: Array[String]
+        @options: untyped?
+        @name: untyped?
+
+        def initialize: (?untyped? name, ?untyped? options, ?hoverable: boolish, **untyped) -> void
+      end
+    end
+  end
+end

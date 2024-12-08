@@ -1,0 +1,18 @@
+module Bulma
+  module Elements
+    module Table
+      class BodyComponent < Bulma::ApplicationComponent
+        @cols_tag: Symbol?
+
+        def initialize: (?cols_tag: Symbol, **untyped html_attributes) -> void
+        def row: (**untyped html_attributes) ?{ (?RowComponent component) -> String } -> RowComponent
+
+        private
+
+        def table_rows: -> Array[RowComponent]
+        def with_table_rows: (Array[Hash[untyped, untyped]]) -> Array[RowComponent]
+        def with_table_row: (**untyped html_attributes) ?{ (?RowComponent component) -> String } -> RowComponent
+      end
+    end
+  end
+end

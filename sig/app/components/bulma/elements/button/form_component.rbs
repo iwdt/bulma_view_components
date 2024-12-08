@@ -1,0 +1,11 @@
+module Bulma
+  module Elements
+    module Button
+      class FormComponent < Button::BaseComponent
+        @name: untyped?
+        @options: untyped?
+        def initialize: (?untyped?, ?untyped?, **untyped) -> void
+      end
+    end
+  end
+end

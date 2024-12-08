@@ -1,0 +1,6 @@
+module ViewComponentContrib
+  class Base < ViewComponent::Base
+    extend TranslationHelper::ClassMethods
+    include WrappedHelper::InstanceMethods
+  end
+end

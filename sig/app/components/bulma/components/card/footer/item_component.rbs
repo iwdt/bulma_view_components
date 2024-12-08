@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Card
+      module Footer
+        class ItemComponent < ApplicationComponent
+        end
+      end
+    end
+  end
+end

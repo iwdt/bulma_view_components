@@ -1,0 +1,22 @@
+module ViewComponentContrib
+  module StyleVariants
+    interface _StyleSet
+      def base: () ?{ () -> void } -> void
+      def defaults: () ?{ () -> void } -> void
+      def variants: () ?{ (?) [self: untyped] -> void } -> void # TODO: Report this problem
+      def compound: (**_ToS variants) ?{ (?) [self: untyped] -> void } -> void
+      def compile: (**_ToS variants) -> Array[_ToS]
+    end
+
+    module InstanceMethods
+      def style: (_ToS? name, **untyped) -> String
+               | (**untyped) -> String
+               | () -> String
+    end
+
+    module ClassMethods
+      def style: (_ToS) ?{ () [self: _StyleSet] -> void } -> void
+               | ()     ?{ () [self: _StyleSet] -> void } -> void
+    end
+  end
+end
