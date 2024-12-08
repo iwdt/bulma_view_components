@@ -1,0 +1,16 @@
+module Bulma
+  module Components
+    module Menu
+      module List
+        class ItemComponent < ApplicationComponent
+          def submenu: -> ListComponent
+          def list: (**untyped html_attributes) -> ListComponent
+
+          private
+
+          def with_submenu: (**untyped html_attributes) -> ListComponent
+        end
+      end
+    end
+  end
+end

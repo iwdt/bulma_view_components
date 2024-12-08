@@ -31,9 +31,12 @@ module Bulma
             end
           end
           card.footer do |footer|
-            footer.item(tag: :a, href: "#") { "Save" }
-            footer.item(tag: :a, href: "#") { "Edit" }
-            footer.item(tag: :a, href: "#") { "Delete" }
+            footer.button_to "It's form tag", "https://rubyonrails.org"
+            footer.link_to "Ruby on Rails", "https://rubyonrails.org"
+            footer.sms_to("123456789") { "Sms me" }
+            footer.phone_to "123456789", "Phone me"
+            footer.mail_to "example@example.com", "Mail me"
+            footer.item(tag: :span) { "Just a text" }
           end
         end
         assert_component_rendered
@@ -44,9 +47,20 @@ module Bulma
         assert_selector(".card>.card-header>button", count: 1, visible: true, class: "card-header-icon")
         assert_selector(".card>div", count: 1, visible: true, class: "card-content")
         assert_selector(".card>footer", count: 1, visible: true, class: "card-footer")
-        assert_selector(".card>.card-footer>a", text: "Save", count: 1, visible: true, class: "card-footer-item")
-        assert_selector(".card>.card-footer>a", text: "Edit", count: 1, visible: true, class: "card-footer-item")
-        assert_selector(".card>.card-footer>a", text: "Delete", count: 1, visible: true, class: "card-footer-item")
+        assert_selector(
+          ".card>.card-footer>form[action='https://rubyonrails.org'][method='post'].button_to>button[type='submit']", text: "It's form tag", count: 1, visible: true, class: "card-footer-item"
+        )
+        assert_selector(
+          ".card>.card-footer>a[href='https://rubyonrails.org']", text: "Ruby on Rails", count: 1, visible: true, class: "card-footer-item"
+        )
+        assert_selector(".card>.card-footer>a[href='sms:123456789;']", text: "Sms me", count: 1, visible: true, class: "card-footer-item")
+        assert_selector(".card>.card-footer>a[href='tel:123456789']", text: "Phone me", count: 1, visible: true, class: "card-footer-item")
+        assert_selector(
+          ".card>.card-footer>a[href='mailto:example@example.com']", text: "Mail me", count: 1, visible: true, class: "card-footer-item"
+        )
+        assert_selector(
+          ".card>.card-footer>span", text: "Just a text", count: 1, visible: true, class: "card-footer-item"
+        )
       end
 
       def test_render_without_body

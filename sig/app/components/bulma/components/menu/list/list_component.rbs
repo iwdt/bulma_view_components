@@ -1,0 +1,16 @@
+module Bulma
+  module Components
+    module Menu
+      module List
+        class ListComponent < ApplicationComponent
+          def item: (**untyped html_options) ?{ (ItemComponent component) -> String } -> ItemComponent
+
+          private
+
+          def list_items: -> Array[ItemComponent]
+          def with_list_item: (**untyped html_options) ?{ (ItemComponent component) -> String } -> ItemComponent
+        end
+      end
+    end
+  end
+end

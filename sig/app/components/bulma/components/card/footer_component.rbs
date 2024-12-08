@@ -3,11 +3,21 @@ module Bulma
     module Card
       class FooterComponent < ApplicationComponent
         def item: (**untyped html_attributes) ?{ (Footer::ItemComponent component) -> String } -> Footer::ItemComponent
+        def link_to: (?untyped, ?untyped, **untyped) ?{ (?Footer::LinkComponent component) -> String } -> Footer::LinkComponent
+        def button_to: (?untyped, ?untyped, **untyped) ?{ (?Footer::FormComponent component) -> String } -> Footer::FormComponent
+        def mail_to: (untyped, ?untyped, **untyped) ?{ (?Footer::MailComponent component) -> String } -> Footer::MailComponent
+        def phone_to: (untyped, ?untyped, **untyped) ?{ (?Footer::PhoneComponent component) -> String } -> Footer::PhoneComponent
+        def sms_to: (untyped, ?untyped, **untyped) ?{ (?Footer::SmsComponent component) -> String } -> Footer::SmsComponent
 
         private
 
         def card_footer_items: -> Array[Footer::ItemComponent]
-        def with_card_footer_item: (**untyped html_attributes) ?{ (Footer::ItemComponent component) -> String } -> Footer::ItemComponent
+        def with_card_footer_item_tag: (**untyped html_attributes) ?{ (Footer::ItemComponent component) -> String } -> Footer::ItemComponent
+        def with_card_footer_item_link_to: (?untyped, ?untyped, **untyped) ?{ (?Footer::LinkComponent component) -> String } -> Footer::LinkComponent
+        def with_card_footer_item_button_to: (?untyped, ?untyped, **untyped) ?{ (?Footer::FormComponent component) -> String } -> Footer::FormComponent
+        def with_card_footer_item_sms_to: (untyped, ?untyped, **untyped) ?{ (?Footer::SmsComponent component) -> String } -> Footer::SmsComponent
+        def with_card_footer_item_phone_to: (untyped, ?untyped, **untyped) ?{ (?Footer::PhoneComponent component) -> String } -> Footer::PhoneComponent
+        def with_card_footer_item_mail_to: (untyped, ?untyped, **untyped) ?{ (?Footer::MailComponent component) -> String } -> Footer::MailComponent
       end
     end
   end

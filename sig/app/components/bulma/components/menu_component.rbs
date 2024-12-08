@@ -1,0 +1,14 @@
+module Bulma
+  module Components
+    class MenuComponent < ApplicationComponent
+      def label: (?String? text, **untyped html_options) ?{ (Menu::LabelComponent component) -> String } -> Menu::LabelComponent
+      def list: (**untyped html_options) ?{ (Menu::ListComponent component) -> String } -> Menu::ListComponent
+
+      private
+
+      def menu_elements: -> Array[Menu::LabelComponent | Menu::ListComponent]
+      def with_menu_element_label: (?String? text, **untyped html_options) ?{ (Menu::LabelComponent component) -> String } -> Menu::LabelComponent
+      def with_menu_element_list: (**untyped html_options) ?{ (Menu::ListComponent component) -> String } -> Menu::ListComponent
+    end
+  end
+end

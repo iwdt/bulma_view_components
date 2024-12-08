@@ -1,0 +1,20 @@
+module Bulma
+  module Components
+    class MessageComponent < ApplicationComponent
+      type color = :dark | :link | :primary | :info | :success | :warning | :danger
+      type size = :small | :normal | :medium | :large
+
+      @color: color?
+      @size: size?
+      def initialize: (?color: color?, ?size: size?, **untyped html_attributes) -> void
+
+      def header: (**untyped html_options) ?{ (Message::HeaderComponent component) -> String } -> Message::HeaderComponent
+
+      private
+
+      def message_body: -> String?
+      def message_header: -> Message::HeaderComponent
+      def with_message_header: (**untyped html_options) ?{ (Message::HeaderComponent component) -> String } -> Message::HeaderComponent
+    end
+  end
+end

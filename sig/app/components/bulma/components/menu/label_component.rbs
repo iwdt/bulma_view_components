@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Menu
+      class LabelComponent < ApplicationComponent
+        @text: String?
+        def initialize: (?String? text, **untyped html_options) -> void
+      end
+    end
+  end
+end
