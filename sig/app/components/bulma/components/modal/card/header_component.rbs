@@ -1,0 +1,16 @@
+module Bulma
+  module Components
+    module Modal
+      module Card
+        class HeaderComponent < ApplicationComponent
+          def title: (?String? text, **untyped html_attributes) ?{ (Header::TitleComponent component) -> String } -> Header::TitleComponent
+
+          private
+
+          def card_header_title: -> Header::TitleComponent
+          def with_card_header_title: (?String? text, **untyped html_attributes) ?{ (Header::TitleComponent component) -> String } -> Header::TitleComponent
+        end
+      end
+    end
+  end
+end

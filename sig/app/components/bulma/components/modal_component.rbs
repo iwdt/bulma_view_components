@@ -1,0 +1,28 @@
+module Bulma
+  module Components
+    class ModalComponent < ApplicationComponent
+      @active: bool?
+      def initialize: (?active: bool?, **untyped html_attributes) -> void
+
+      def body: (**untyped html_attributes) ?{ (Modal::ContentComponent component) -> String } -> Modal::ContentComponent
+      def card: (**untyped html_attributes) ?{ (Modal::CardComponent component) -> String } -> Modal::CardComponent
+      def overlay: (**untyped html_attributes) ?{ (ApplicationComponent component) -> String } -> ApplicationComponent
+      def close: (**untyped html_attributes) ?{ (ApplicationComponent component) -> String } -> ApplicationComponent
+
+      private
+
+      def modal_card?: -> bool
+      def modal_content?: -> bool
+
+      def modal_content: -> Modal::ContentComponent
+      def modal_card: -> Modal::CardComponent
+      def modal_overlay: -> ApplicationComponent
+      def modal_close: -> ApplicationComponent
+
+      def with_modal_content: (**untyped html_attributes) ?{ (Modal::ContentComponent component) -> String } -> Modal::ContentComponent
+      def with_modal_card: (**untyped html_attributes) ?{ (Modal::CardComponent component) -> String } -> Modal::CardComponent
+      def with_modal_overlay: (**untyped html_attributes) ?{ (ApplicationComponent component) -> String } -> ApplicationComponent
+      def with_modal_close: (**untyped html_attributes) ?{ (ApplicationComponent component) -> String } -> ApplicationComponent
+    end
+  end
+end

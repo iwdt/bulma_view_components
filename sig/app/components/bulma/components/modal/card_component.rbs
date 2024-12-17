@@ -1,0 +1,23 @@
+module Bulma
+  module Components
+    module Modal
+      class CardComponent < ApplicationComponent
+        def header: (**untyped html_attributes) ?{ (Card::HeaderComponent component) -> String } -> Card::HeaderComponent
+        def body: (**untyped html_attributes) ?{ (Card::ContentComponent component) -> String } -> Card::ContentComponent
+        def footer: (**untyped html_attributes) ?{ (Card::FooterComponent component) -> String } -> Card::FooterComponent
+
+        private
+
+        def card_header: -> Card::HeaderComponent
+        def card_content: -> Card::ContentComponent
+        def card_footer: -> Card::FooterComponent
+
+        def with_card_header: (**untyped html_attributes) ?{ (Card::HeaderComponent component) -> String } -> Card::HeaderComponent
+        def with_card_content: (**untyped html_attributes) ?{ (Card::ContentComponent component) -> String } -> Card::ContentComponent
+        def with_card_footer: (**untyped html_attributes) ?{ (Card::FooterComponent component) -> String } -> Card::FooterComponent
+
+        def card_content?: -> bool
+      end
+    end
+  end
+end

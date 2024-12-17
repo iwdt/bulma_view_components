@@ -1,0 +1,16 @@
+module Bulma
+  module Components
+    module Modal
+      module Card
+        module Header
+          class TitleComponent < ApplicationComponent
+            @centered: bool?
+            @text: String?
+
+            def initialize: (?String? text, ?centered: bool?, **untyped html_attributes) -> void
+          end
+        end
+      end
+    end
+  end
+end

@@ -158,13 +158,9 @@ module Bulma
     def root_style(*names, **variants)
       styles = [] # : Array[html_class]
       if names.any?
-        names.each do |name|
-          class_names = style(name, **variants)
-          styles << class_names unless class_names.nil?
-        end
+        names.each { styles << style(_1, **variants) }
       else
-        root_styles = style(**variants)
-        styles << root_styles unless root_styles.nil?
+        styles << style(**variants)
       end
       styles << @root_classes if @root_classes.present?
       styles.concat(root_modifiers)
