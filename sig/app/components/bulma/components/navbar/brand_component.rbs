@@ -1,0 +1,37 @@
+module Bulma
+  module Components
+    module Navbar
+      class BrandComponent < ApplicationComponent
+        def burger: (**untyped html_attributes) ?{ (Brand::BurgerComponent component) -> String } -> Brand::BurgerComponent
+
+        def link_to: (?untyped, ?untyped, **untyped) ?{ (Item::LinkComponent component) -> String } -> Item::LinkComponent
+        def item: (**untyped html_attributes) ?{ (ItemComponent component) -> String } -> ItemComponent
+        def dropdown: (**untyped html_attributes) ?{ (Item::DropdownComponent component) -> String } -> Item::DropdownComponent
+
+        def button_to: (?untyped, ?untyped, **untyped) ?{ (?Item::FormComponent component) -> String } -> Item::FormComponent
+        def mail_to: (untyped, ?untyped, **untyped) ?{ (?Item::MailComponent component) -> String } -> Item::MailComponent
+        def phone_to: (untyped, ?untyped, **untyped) ?{ (?Item::PhoneComponent component) -> String } -> Item::PhoneComponent
+        def sms_to: (untyped, ?untyped, **untyped) ?{ (?Item::SmsComponent component) -> String } -> Item::SmsComponent
+
+        alias logo link_to
+
+        private
+
+        def navbar_burger?: -> bool
+        def navbar_burger: -> Brand::BurgerComponent
+        def with_navbar_burger: (**untyped html_attributes) ?{ (Brand::BurgerComponent component) -> String } -> Brand::BurgerComponent
+
+        def navbar_items: -> Array[ItemComponent]
+        def with_navbar_item_link: (?untyped, ?untyped, **untyped) ?{ (Item::LinkComponent component) -> String } -> Item::LinkComponent
+        def with_navbar_item_base: (**untyped html_attributes) ?{ (ItemComponent component) -> String } -> ItemComponent
+        def with_navbar_item_dropdown: (**untyped html_attributes) ?{ (Item::DropdownComponent component) -> String } -> Item::DropdownComponent
+
+
+        def with_navbar_item_button_to: (?untyped, ?untyped, **untyped) ?{ (?Item::FormComponent component) -> String } -> Item::FormComponent
+        def with_navbar_item_mail_to: (untyped, ?untyped, **untyped) ?{ (?Item::MailComponent component) -> String } -> Item::MailComponent
+        def with_navbar_item_phone_to: (untyped, ?untyped, **untyped) ?{ (?Item::PhoneComponent component) -> String } -> Item::PhoneComponent
+        def with_navbar_item_sms_to: (untyped, ?untyped, **untyped) ?{ (?Item::SmsComponent component) -> String } -> Item::SmsComponent
+      end
+    end
+  end
+end

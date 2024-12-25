@@ -1,0 +1,21 @@
+module Bulma
+  module Components
+    module Navbar
+      class MenuComponent < ApplicationComponent
+        @active: bool?
+
+        def initialize: (?active: bool?, **untyped html_attributes) -> void
+
+        def left: (**untyped html_attributes) ?{ (Menu::LeftComponent component) -> String } -> Menu::LeftComponent
+        def right: (**untyped html_attributes) ?{ (Menu::RightComponent component) -> String } -> Menu::RightComponent
+
+        private
+
+        def navbar_left: () -> Menu::LeftComponent
+        def navbar_right: () -> Menu::RightComponent
+        def with_navbar_left: (**untyped html_attributes) ?{ (Menu::LeftComponent component) -> String } -> Menu::LeftComponent
+        def with_navbar_right: (**untyped html_attributes) ?{ (Menu::RightComponent component) -> String } -> Menu::RightComponent
+      end
+    end
+  end
+end

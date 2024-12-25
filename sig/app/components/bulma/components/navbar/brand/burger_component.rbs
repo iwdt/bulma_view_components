@@ -1,0 +1,17 @@
+module Bulma
+  module Components
+    module Navbar
+      module Brand
+        class BurgerComponent < ApplicationComponent
+          @active: bool?
+          def initialize: (?active: bool?, **untyped html_attributes) -> void
+
+          private
+
+          def slices: -> Array[String]
+          def slice: -> String
+        end
+      end
+    end
+  end
+end

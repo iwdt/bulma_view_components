@@ -1,0 +1,17 @@
+module Bulma
+  module Components
+    module Navbar
+      class ItemComponent < ApplicationComponent
+        @expanded: bool?
+        @tab: bool?
+        @selected: bool?
+
+        def initialize: (?expanded: bool?, ?tab: bool?, ?selected: bool?, **untyped html_attributes) -> void
+
+        private
+
+        def variants: -> { expaned: bool?, tab: bool?, selected: bool? }
+      end
+    end
+  end
+end

@@ -6,7 +6,7 @@ target :lib do
   signature "sig"
 
   check "lib"
-  check "app"
+  check "app/components"
 
   configure_code_diagnostics(D::Ruby.strict) do |hash|
     # hash[D::Ruby::NoMethod] = nil

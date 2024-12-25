@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Navbar
+      module Menu
+        class RightComponent < BaseComponent
+        end
+      end
+    end
+  end
+end

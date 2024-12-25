@@ -1,0 +1,36 @@
+module Bulma
+  module Components
+    module Navbar
+      module Item
+        class DropdownComponent < ItemComponent
+          @hoverable: bool?
+          @active: bool?
+          @mobile: bool?
+          @right: bool?
+          @up: bool?
+          @boxed: bool?
+
+          def initialize: (
+            ?hoverable: bool?,
+            ?active: bool?,
+            ?mobile: bool?,
+            ?up: bool?,
+            ?right: bool?,
+            ?boxed: bool?,
+            **untyped html_attributes
+          ) -> void
+
+          def trigger: (?untyped, ?untyped, **untyped html_attributes) ?{ (Dropdown::TriggerComponent component) -> String } -> Dropdown::TriggerComponent
+          def menu: (**untyped html_attributes) ?{ (Dropdown::MenuComponent component) -> String } -> Dropdown::MenuComponent
+
+          private
+
+          def dropdown_trigger: -> Dropdown::TriggerComponent?
+          def dropdown_menu: -> Dropdown::MenuComponent?
+          def with_dropdown_trigger: (?untyped, ?untyped, **untyped html_attributes) ?{ (Dropdown::TriggerComponent component) -> String } -> Dropdown::TriggerComponent
+          def with_dropdown_menu: (**untyped html_attributes) ?{ (Dropdown::MenuComponent component) -> String } -> Dropdown::MenuComponent
+        end
+      end
+    end
+  end
+end

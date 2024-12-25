@@ -1,0 +1,10 @@
+module Bulma
+  module Components
+    module Navbar
+      module Item
+        class DividerComponent < ApplicationComponent
+        end
+      end
+    end
+  end
+end

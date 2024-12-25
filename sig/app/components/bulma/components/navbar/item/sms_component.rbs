@@ -1,0 +1,13 @@
+module Bulma
+  module Components
+    module Navbar
+      module Item
+        class SmsComponent < ItemComponent
+          @phone_number: untyped?
+          @name: untyped?
+          def initialize: (?untyped?, ?untyped?, **untyped) -> void
+        end
+      end
+    end
+  end
+end

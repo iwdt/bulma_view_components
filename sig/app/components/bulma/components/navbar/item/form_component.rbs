@@ -1,0 +1,13 @@
+module Bulma
+  module Components
+    module Navbar
+      module Item
+        class FormComponent < ItemComponent
+          @name: untyped?
+          @options: untyped?
+          def initialize: (?untyped?, ?untyped?, **untyped) -> void
+        end
+      end
+    end
+  end
+end

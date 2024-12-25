@@ -1,0 +1,16 @@
+module Bulma
+  module Components
+    module Navbar
+      module Item
+        module Dropdown
+          class TriggerComponent < ApplicationComponent
+            @name: untyped?
+            @options: untyped?
+            @arrowless: bool?
+            def initialize: (?untyped?, ?untyped?, ?arrowless: bool?, **untyped) -> void
+          end
+        end
+      end
+    end
+  end
+end

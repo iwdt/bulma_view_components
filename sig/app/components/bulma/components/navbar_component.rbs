@@ -1,0 +1,26 @@
+module Bulma
+  module Components
+    class NavbarComponent < ApplicationComponent
+      type fixed_position = bool | :top | :bottom
+      type color = :primary | :link | :info | :success | :warning | :danger | :black | :dark | :light | :white
+      @transparent: bool?
+      @fixed: fixed_position?
+      @color: color?
+      @spaced: bool?
+      @shadow: bool?
+
+      def initialize: (?transparent: bool?, ?fixed: fixed_position?, ?color: color?, ?spaced: bool?, ?shadow: bool?, **untyped html_attributs) -> void
+
+      def brand: (**untyped html_attributes) ?{ (Navbar::BrandComponent component) -> String } -> Navbar::BrandComponent
+      def menu: (**untyped html_attributes) ?{ (Navbar::MenuComponent component) -> String } -> Navbar::MenuComponent
+
+      private
+
+      def navbar_brand: -> Navbar::BrandComponent
+      def navbar_menu: -> Navbar::MenuComponent
+
+      def with_navbar_brand: (**untyped html_attributes) ?{ (Navbar::BrandComponent component) -> String } -> Navbar::BrandComponent
+      def with_navbar_menu: (**untyped html_attributes) ?{ (Navbar::MenuComponent component) -> String } -> Navbar::MenuComponent
+    end
+  end
+end
