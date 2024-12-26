@@ -1,0 +1,20 @@
+module Bulma
+  module Components
+    module Tabs
+      class TabComponent < ApplicationComponent
+        @name: untyped?
+        @options: untyped?
+        @active: bool?
+        def initialize: (?untyped?, ?untyped?, ?active: bool?, **untyped) -> void
+
+        def tab_icon: -> Elements::IconComponent
+        def icon: (**untyped) ?{ (Elements::IconComponent) -> String } -> Elements::IconComponent
+
+        private
+
+        def tab_link: -> String
+        def with_tab_icon: (**untyped) ?{ (Elements::IconComponent) -> String } -> Elements::IconComponent
+      end
+    end
+  end
+end

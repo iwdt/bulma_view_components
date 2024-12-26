@@ -1,0 +1,22 @@
+module Bulma
+  module Components
+    class TabsComponent < ApplicationComponent
+      type alignment = :left | :center | :right
+      type size = :small | :normal | :medium | :large
+      type variant = :boxed | :toggle | :rounded
+
+      @alignment: alignment?
+      @size: size?
+      @variant: variant?
+      @full_width: bool?
+      def initialize: (?alignment: alignment?, ?size: size?, ?variant: variant?, ?full_width: bool?, **untyped) -> void
+
+      def link_to: (?untyped?, ?untyped?, **untyped) ?{ (Tabs::TabComponent) -> String } -> Tabs::TabComponent
+
+      private
+
+      def tab_links: -> Array[Tabs::TabComponent]
+      def with_tab_link: (?untyped?, ?untyped?, **untyped) ?{ (Tabs::TabComponent) -> String } -> Tabs::TabComponent
+    end
+  end
+end
