@@ -1,0 +1,29 @@
+module Bulma
+  module Components
+    class PaginationComponent < ApplicationComponent
+      type order = :left | :center | :right
+      type size = :small | :normal | :medium | :large
+
+      @order: order?
+      @rounded: bool?
+      @size: size?
+      def initialize: (?rounded: bool?, ?size: size?, ?order: order?, **untyped) -> void
+
+      def prev: (?untyped, ?untyped, **untyped) ?{ (?Pagination::PrevComponent component) -> String } -> Pagination::PrevComponent
+      def next: (?untyped, ?untyped, **untyped) ?{ (?Pagination::NextComponent component) -> String } -> Pagination::NextComponent
+      def page: (?untyped, ?untyped, **untyped) ?{ (?Pagination::LinkComponent component) -> String } -> Pagination::LinkComponent
+      def ellipsis: (?String, **untyped) ?{ (?Pagination::EllipsisComponent component) -> String } -> Pagination::EllipsisComponent
+
+      private
+
+      def pager_prev: -> Pagination::PrevComponent
+      def pager_next: -> Pagination::NextComponent
+      def pager_list: -> String
+      def pager_items: -> Array[Pagination::LinkComponent | Pagination::EllipsisComponent]
+      def with_pager_prev: (?untyped, ?untyped, **untyped) ?{ (?Pagination::PrevComponent component) -> String } -> Pagination::PrevComponent
+      def with_pager_next: (?untyped, ?untyped, **untyped) ?{ (?Pagination::NextComponent component) -> String } -> Pagination::NextComponent
+      def with_pager_item_link: (?untyped, ?untyped, **untyped) ?{ (?Pagination::LinkComponent component) -> String } -> Pagination::LinkComponent
+      def with_pager_item_ellipsis: (?String, **untyped) ?{ (?Pagination::EllipsisComponent component) -> String } -> Pagination::EllipsisComponent
+    end
+  end
+end

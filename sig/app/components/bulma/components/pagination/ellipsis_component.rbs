@@ -1,0 +1,13 @@
+module Bulma
+  module Components
+    module Pagination
+      class EllipsisComponent < ApplicationComponent
+        ELLIPSIS_ENTITY_NAME: String
+
+        @text: String?
+
+        def initialize: (?String? text, **untyped html_attributes) -> void
+      end
+    end
+  end
+end

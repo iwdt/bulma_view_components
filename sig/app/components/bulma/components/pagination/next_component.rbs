@@ -1,0 +1,12 @@
+module Bulma
+  module Components
+    module Pagination
+      class NextComponent < ApplicationComponent
+        @name: untyped?
+        @options: untyped?
+        @disabled: bool?
+        def initialize: (?untyped?, ?untyped?, ?disabled: bool?, **untyped) -> void
+      end
+    end
+  end
+end

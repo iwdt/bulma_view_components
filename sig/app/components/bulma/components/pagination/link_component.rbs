@@ -1,0 +1,17 @@
+module Bulma
+  module Components
+    module Pagination
+      class LinkComponent < ApplicationComponent
+        @name: untyped?
+        @options: untyped?
+        @current: bool?
+        @disabled: bool?
+        def initialize: (?untyped?, ?untyped?, ?disabled: bool?, ?current: bool?, **untyped) -> void
+
+        private
+
+        def pager_link: -> String
+      end
+    end
+  end
+end
