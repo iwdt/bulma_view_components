@@ -18,7 +18,6 @@ module Bulma
           pager.page 86, "#", aria: {label: "Goto page 86"}
         end
         assert_component_rendered
-        binding.irb
         # TODO: Write more tests
       end
     end

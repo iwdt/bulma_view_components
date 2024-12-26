@@ -47,14 +47,18 @@ module Bulma
             medium { "is-medium" }
             large { "is-large" }
           end
+          left do
+            yes { "is-left" }
+          end
           # steep:ignore:end
         end
       end
 
       # @param size [Symbol] Icon size. one of :small, :normal, :medium or :large
       # @param html_attributes [Hash<Symbol, Object>] Root HTML element attributes. see: {Bulma::ApplicationComponent#initialize}
-      def initialize(size: nil, **html_attributes)
+      def initialize(size: nil, left: false, **html_attributes)
         @size = size
+        @left = left
         super(**html_attributes)
       end
 

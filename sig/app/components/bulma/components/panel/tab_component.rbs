@@ -1,0 +1,12 @@
+module Bulma
+  module Components
+    module Panel
+      class TabComponent < ApplicationComponent
+        @name: untyped?
+        @options: untyped?
+        @active: bool?
+        def initialize: (?untyped?, ?untyped?, ?active: bool?, **untyped) -> void
+      end
+    end
+  end
+end

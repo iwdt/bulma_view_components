@@ -1,0 +1,26 @@
+module Bulma
+  module Components
+    class PanelComponent < ApplicationComponent
+      type color = :link | :primary | :info | :success | :warning | :danger
+
+      @color: color?
+      def initialize: (?color: color?, **untyped) -> void
+
+      def header: (?untyped, **untyped) ?{ (Panel::HeaderComponent) -> String } -> Panel::HeaderComponent
+      def block: (**untyped) ?{ (Panel::BlockComponent) -> String } -> Panel::BlockComponent
+      def link_to: (?untyped?, ?untyped?, **untyped) ?{ (Panel::LinkComponent) -> String } -> Panel::LinkComponent
+      def label: (**untyped) ?{ (Panel::LabelComponent) -> String } -> Panel::LabelComponent
+      def tabs: (**untyped) ?{ (Panel::TabsComponent) -> String } -> Panel::TabsComponent
+      private
+
+      def panel_header: -> Panel::HeaderComponent
+      def with_panel_header: (?untyped, **untyped) ?{ (Panel::HeaderComponent) -> String } -> Panel::HeaderComponent
+
+      def panel_items: -> Array[Panel::BlockComponent | Panel::TabsComponent | Panel::LinkComponent | Panel::LabelComponent]
+      def with_panel_item_block: (**untyped) ?{ (Panel::BlockComponent) -> String } -> Panel::BlockComponent
+      def with_panel_item_link_to: (?untyped?, ?untyped?, **untyped) ?{ (Panel::LinkComponent) -> String } -> Panel::LinkComponent
+      def with_panel_item_label: (**untyped) ?{ (Panel::LabelComponent) -> String } -> Panel::LabelComponent
+      def with_panel_item_tabs: (**untyped) ?{ (Panel::TabsComponent) -> String } -> Panel::TabsComponent
+    end
+  end
+end

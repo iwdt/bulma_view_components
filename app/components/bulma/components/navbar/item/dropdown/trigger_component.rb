@@ -27,9 +27,7 @@ module Bulma
             def call
               html_options = root_attributes(arrowless: @arrowless)
 
-              if !content? && !@name.nil?
-                return tag.a @name, **html_options
-              end
+              return tag.a(@name, **html_options) if !content? && @options.nil?
 
               if content?
                 html_options = @options.merge(root_attributes) if @options.is_a?(Hash)

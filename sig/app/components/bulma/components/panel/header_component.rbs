@@ -1,0 +1,11 @@
+module Bulma
+  module Components
+    module Panel
+      class HeaderComponent < ApplicationComponent
+        @text: String?
+
+        def initialize: (?String?, **untyped) -> void
+      end
+    end
+  end
+end

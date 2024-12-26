@@ -1,0 +1,8 @@
+module Bulma
+  module Components
+    module Panel
+      class IconComponent < ApplicationComponent
+      end
+    end
+  end
+end

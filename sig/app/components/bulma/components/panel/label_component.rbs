@@ -1,0 +1,17 @@
+module Bulma
+  module Components
+    module Panel
+      class LabelComponent < ApplicationComponent
+        @active: bool?
+        def initialize: (?active: bool?, **untyped) -> void
+
+        def icon: (**untyped) ?{ (IconComponent) -> String } -> IconComponent
+
+        private
+
+        def panel_icon: -> IconComponent
+        def with_panel_icon: (**untyped) ?{ (IconComponent) -> String } -> IconComponent
+      end
+    end
+  end
+end

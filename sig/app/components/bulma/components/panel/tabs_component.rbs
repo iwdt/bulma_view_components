@@ -1,0 +1,14 @@
+module Bulma
+  module Components
+    module Panel
+      class TabsComponent < ApplicationComponent
+        def link_to: (?untyped?, ?untyped?, **untyped) ?{ (TabComponent) -> String } -> TabComponent
+
+        private
+
+        def panel_tabs: -> Array[TabComponent]
+        def with_panel_tab: (?untyped?, ?untyped?, **untyped) ?{ (TabComponent) -> String } -> TabComponent
+      end
+    end
+  end
+end
